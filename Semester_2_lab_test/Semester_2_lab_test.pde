@@ -10,6 +10,8 @@ void setup()
   planex=0;
   bombx=700;
   bomby=700;
+  manx=60;
+  many=400;
   
   
 }
@@ -24,6 +26,10 @@ float cloud5x;
 float planex;
 float bombx;
 float bomby;
+float manx;
+float many;
+
+
 void draw()
 {
 float halfheight = height/2;
@@ -144,34 +150,65 @@ float halfwidth = width/2;
   {
     bomby=425;
     bombx=50;
+    manx--;
+    if(manx<=bombx)
+    {
+      manx=60;
+      bombx=600;
+      
+    }
   }
   
   if(bomby>=400 && bomby<=450 && bombx>=100 && bombx<=200)
   {
     bomby=440;
     bombx=150;
+    manx++;
+    if(manx>=bombx)
+    {
+      manx=60;
+      bombx=600;
+    }
   }
   
   if(bomby>=400 && bomby<=450 && bombx>=200 && bombx<=300)
   {
     bomby=435;
     bombx=250;
+    manx++;
+    if(manx>=bombx)
+    {
+      manx=60;
+      bombx=600;
+    }
   }
   
   if(bomby>=400 && bomby<=450 && bombx>=300 && bombx<=400)
   {
     bomby=415;
     bombx=350;
+    manx++;
+    if(manx>=bombx)
+    {
+      manx=60;
+      bombx=600;
+    }
   }
   
   if(bomby>=400 && bomby<=450 && bombx>=400 && bombx<=500)
   {
     bomby=405;
     bombx=450;
+    manx++;
+    if(manx>=bombx)
+    {
+      manx=60;
+      bombx=600;
+    }
   }
   
   
-  
+  //bomb drop button
   
   if(keyPressed)
   {
@@ -183,7 +220,14 @@ float halfwidth = width/2;
   }
   
 
-  
+// man
+
+fill(255,0,255);
+ellipse(manx,many,20,20);
+line(manx-10,many+15,manx+10,many+15);
+rect(manx-5,many+10,10,20);
+line(manx-5,many+30,manx-5,many+40);
+line(manx+5,many+30,manx+5,many+40);  
   
   
   
