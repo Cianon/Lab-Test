@@ -8,6 +8,9 @@ void setup()
   cloud4x=width-300;
   cloud5x=width-400;
   planex=0;
+  bombx=700;
+  bomby=700;
+  
   
 }
 
@@ -19,7 +22,8 @@ float cloud3x;
 float cloud4x;
 float cloud5x;
 float planex;
-
+float bombx;
+float bomby;
 void draw()
 {
 float halfheight = height/2;
@@ -114,6 +118,70 @@ float halfwidth = width/2;
   {
     planex=-250;
   }
+  
+  
+  //bomb
+  strokeWeight(2);
+  stroke(0);
+  fill(255,0,0);
+  
+  ellipse(bombx,bomby,10,10);
+  bomby+=8;
+  bombx+=1;
+  
+  if(bomby>=700)
+  {
+    bomby=600;
+  }
+  
+  if (bombx>=700)
+  {
+    bombx=600;
+  }
+  
+  // bomb landing
+  if(bomby>=400 && bomby<=450 && bombx>=0 && bombx<=100)
+  {
+    bomby=425;
+    bombx=50;
+  }
+  
+  if(bomby>=400 && bomby<=450 && bombx>=100 && bombx<=200)
+  {
+    bomby=440;
+    bombx=150;
+  }
+  
+  if(bomby>=400 && bomby<=450 && bombx>=200 && bombx<=300)
+  {
+    bomby=435;
+    bombx=250;
+  }
+  
+  if(bomby>=400 && bomby<=450 && bombx>=300 && bombx<=400)
+  {
+    bomby=415;
+    bombx=350;
+  }
+  
+  if(bomby>=400 && bomby<=450 && bombx>=400 && bombx<=500)
+  {
+    bomby=405;
+    bombx=450;
+  }
+  
+  
+  
+  
+  if(keyPressed)
+  {
+    if (key==' ')
+    {
+      bomby=75;
+      bombx=planex+200;
+    }
+  }
+  
 
   
   
