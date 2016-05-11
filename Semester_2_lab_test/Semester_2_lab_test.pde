@@ -12,12 +12,7 @@ void setup()
   bomby=700;
   manx=60;
   many=400;
-  
-  
 }
-
-
-
 float cloud1x;
 float cloud2x;
 float cloud3x;
@@ -28,29 +23,19 @@ float bombx;
 float bomby;
 float manx;
 float many;
-
-
 void draw()
 {
 float halfheight = height/2;
 float halfwidth = width/2;
-
-
-
-
-
 // Ground and background
   background(0,255,255);
   stroke(0,255,0);
   strokeWeight(10);
   fill(0,255,0);
-  rect(0,halfheight, width,halfheight);
-  
+  rect(0,halfheight, width,halfheight);  
   // clouds
   stroke(255);
-  fill(255);
-  
-  
+  fill(255);  
   //cloud1 
   ellipse( cloud1x,100,45,25);
   ellipse(cloud1x+20,100,35,15);
@@ -144,7 +129,6 @@ float halfwidth = width/2;
   {
     bombx=600;
   }
-  
   // bomb landing
   if(bomby>=400 && bomby<=450 && bombx>=0 && bombx<=100)
   {
@@ -155,7 +139,6 @@ float halfwidth = width/2;
     {
      // manx=60;
       bombx=600;
-      
     }
   }
   
@@ -232,9 +215,5 @@ ellipse(manx,many,20,20);
 line(manx-10,many+15,manx+10,many+15);
 rect(manx-5,many+10,10,20);
 line(manx-5,many+30,manx-5,many+40);
-line(manx+5,many+30,manx+5,many+40);  
-  
-  
-  
- 
+line(manx+5,many+30,manx+5,many+40);   
 }
