@@ -153,7 +153,7 @@ float halfwidth = width/2;
     manx--;
     if(manx<=bombx)
     {
-      manx=60;
+     // manx=60;
       bombx=600;
       
     }
@@ -166,7 +166,7 @@ float halfwidth = width/2;
     manx++;
     if(manx>=bombx)
     {
-      manx=60;
+     // manx=60;
       bombx=600;
     }
   }
@@ -178,7 +178,7 @@ float halfwidth = width/2;
     manx++;
     if(manx>=bombx)
     {
-      manx=60;
+     // manx=60;
       bombx=600;
     }
   }
@@ -190,7 +190,7 @@ float halfwidth = width/2;
     manx++;
     if(manx>=bombx)
     {
-      manx=60;
+     // manx=60;
       bombx=600;
     }
   }
@@ -202,9 +202,14 @@ float halfwidth = width/2;
     manx++;
     if(manx>=bombx)
     {
-      manx=60;
+     // manx=60;
       bombx=600;
     }
+  }
+  
+  if (bombx>500 && manx>60)
+  {
+    manx--;
   }
   
   
